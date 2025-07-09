@@ -1,6 +1,5 @@
 {{
-    config(materialized='table',
-    database = 'source')
+    config(materialized='table')
 }}
 Select 
     EMPLOYEE_ID,
@@ -15,4 +14,4 @@ Select
     MANAGER_ID,
     DEPARTMENT_ID,
     current_timestamp as LOAD_TIME
-from {{ source('hr','employees') }} as src
+from {{ source('hr','employees') }}
