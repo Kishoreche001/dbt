@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: hr
+    database: source
+    schema: hr
+    description: "hr-related raw data"
+
+    tables:
+      - name: employees
+      - name: departments
+      - name: locations
+      - name: regions
+      - name: countries
+      - name: jobs
+      - name: salary
+      

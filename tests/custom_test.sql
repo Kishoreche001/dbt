@@ -1,0 +1,1 @@
+{{test_not_null('stg_departments','DEPARTMENT_ID')}}
