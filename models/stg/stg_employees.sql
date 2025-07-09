@@ -1,5 +1,6 @@
 {{
-    config(materialized='table')
+    config(materialized='table',
+    tags = ['stg'])
 }}
 Select 
     EMPLOYEE_ID,

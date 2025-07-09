@@ -15,5 +15,5 @@ select
     HRA,
     ALLOWANCES,
     PF,
-    LOAD_TIME
+    current_timestamp as LOAD_TIME
 from {{source('hr','salary')}}

@@ -1,0 +1,103 @@
+version: 2
+
+models:
+  - name: stg_employees
+    description: staging table from employees
+    columns:
+      - name: employee_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_departments
+    description: staging table from departments
+    columns:
+      - name: department_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_locations
+    description: staging table from locations
+    columns:
+      - name: location_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_jobs
+    description: staging table from jobs
+    columns:
+      - name: job_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_countries
+    description: staging table from countries
+    columns:
+      - name: country_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_regions
+    description: staging table from regions
+    columns:
+      - name: region_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_salary
+    description: staging table from salary data
+    columns:
+      - name: employee_id
+        tests:
+          - not_null
+          - unique
+#dim models:
+  - name: dim_employees 
+    description: dimension table from employees
+    columns:
+      - name: employee_id
+        tests:
+          - not_null
+          - unique
+  - name: dim_departments 
+    description: dimension table from departments
+    columns:
+      - name: department_id
+        tests:
+          - not_null
+          - unique
+  - name: dim_locations
+    description: dimension table from locations
+    columns:
+      - name: location_id
+        tests:
+          - not_null
+          - unique
+  - name: dim_jobs
+    description: dimension table from jobs
+    columns:
+      - name: job_id
+        tests:
+          - not_null
+          - unique
+  - name: dim_countries
+    description: dimension table from countries
+    columns:
+      - name: country_id
+        tests:
+          - not_null
+          - unique
+  - name: dim_regions
+    description: dimension table from regions
+    columns:
+      - name: region_id
+        tests:
+          - not_null
+          - unique
+# fct model:
+  - name: fct_salary
+    description: fact table from salary information
+    columns:
+      - name: employee_id
+        tests:
+          - not_null
+          - unique

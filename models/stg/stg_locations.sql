@@ -8,5 +8,5 @@ Select
     CITY,
     STATE_PROVINCE,
     COUNTRY_ID,
-    LOAD_TIME
+    current_timestamp as LOAD_TIME
 from {{source('hr','locations')}}
